@@ -8,7 +8,9 @@ def stock_picker(price_array)
         price_index = price_array.find_index(price)
         sell_price_array = price_array.drop(price_index + 1)
 
-        p sell_price_array
+        if !sell_price_array.empty?
+            p sell_price_array
+        end
         
         
         # price_array.each_with_index do |current_price, day|
