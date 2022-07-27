@@ -2,7 +2,16 @@ sample_price_array = [17,3,6,9,15,8,6,10,1]
 
 def stock_picker(price_array)
     price_hash = price_array.map.with_index { |x, i| [i, x] }.to_h
-    puts price_hash
+    #puts price_hash
+
+    price_hash.each do |index, price|
+        max_profit = 0
+        #puts index
+        #puts price
+
+        price_hash.each do |day, current_price|
+        end
+    end
 
 end
 
