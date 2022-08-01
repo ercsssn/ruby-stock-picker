@@ -82,3 +82,41 @@ array = [17, 3, 6, 9, 15, 8, 5, 1, 10]
 
 p stock_picker(array)
 # => [1, 4]
+
+#TOP 2
+#stock_picker([17,3,6,9,15,8,6,1,10])
+#>[1,4]
+#gets the greatest difference in array assuming the lowest number has to come first
+#returns the index of lowest number, followed by index of highest number
+
+input = [17,3,6,9,15,8,6,1,10]
+
+def stock_picker(prices)
+  results = prices.each_with_index.to_a.combination(2).max_by{|buy,sell| sell[0]-buy[0]}.map{|price, i| i}
+end
+
+puts(stock_picker(input))
+
+#TOP 3
+def stock_picker(prices)
+    best_profit = 0
+    best_buy_sell_days = ""
+    
+    prices.each_with_index do |element1, index1|
+        prices.each_with_index do |element2, index2|
+
+            profit = element2 - element1
+
+        if profit > best_profit && index1 < index2
+            best_profit = profit
+            best_buy_sell_days = [index1, index2]
+        end
+    end
+    end
+
+    p best_buy_sell_days
+    best_buy_sell_days
+    end
+    
+stock_picker([17,3,6,9,15,8,6,1,10])
+# => [1, 4]
