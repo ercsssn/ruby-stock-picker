@@ -54,7 +54,6 @@ end
 
 # end
 
-#TOP 1
 def stock_picker(prices)
   min_p = prices[0]
   min_i = 0
@@ -83,7 +82,7 @@ array = [17, 3, 6, 9, 15, 8, 5, 1, 10]
 p stock_picker(array)
 # => [1, 4]
 
-#TOP 2
+
 #stock_picker([17,3,6,9,15,8,6,1,10])
 #>[1,4]
 #gets the greatest difference in array assuming the lowest number has to come first
@@ -97,7 +96,6 @@ end
 
 puts(stock_picker(input))
 
-#TOP 3
 def stock_picker(prices)
     best_profit = 0
     best_buy_sell_days = ""
